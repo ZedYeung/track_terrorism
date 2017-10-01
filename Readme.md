@@ -67,13 +67,13 @@ What is more, for better interaction, I add sidebar with all the years and toolt
 3. The plot is good, but I think maybe with some summary text it would be better.
 
 # Resources
-https://github.com/d3/d3/wiki/transitions
-https://github.com/d3/d3-interpolate
-http://4waisenkinder.de/blog/2014/05/11/d3-dot-js-tween-in-detail/
-https://bl.ocks.org/mbostock/7004f92cac972edef365
-https://stackoverflow.com/questions/20644415/d3-appending-text-to-a-svg-rectangle
-http://www.worldatlas.com/webimage/countrys/eu.htm
-https://en.wikipedia.org/wiki/Southeast_Europe
-https://stackoverflow.com/questions/30174251/how-d3-key-function-in-data-binding-works
-https://matplotlib.org/users/colors.html
-http://pandas.pydata.org/pandas-docs/version/0.20/generated/pandas.to_datetime.html
+https://github.com/d3/d3/wiki/transitions  
+https://github.com/d3/d3-interpolate  
+http://4waisenkinder.de/blog/2014/05/11/d3-dot-js-tween-in-detail/  
+https://bl.ocks.org/mbostock/7004f92cac972edef365  
+https://stackoverflow.com/questions/20644415/d3-appending-text-to-a-svg-rectangle  
+http://www.worldatlas.com/webimage/countrys/eu.htm  
+https://en.wikipedia.org/wiki/Southeast_Europe  
+https://stackoverflow.com/questions/30174251/how-d3-key-function-in-data-binding-works  
+https://matplotlib.org/users/colors.html  
+http://pandas.pydata.org/pandas-docs/version/0.20/generated/pandas.to_datetime.html  
