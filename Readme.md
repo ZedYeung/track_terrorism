@@ -36,7 +36,7 @@ Last but not least, I filtered the longitude and latitude before export the data
 
 The detail of other plots are showed in Jupyter Notebook, I mainly focus on the development of global terrorism from 1970.
 
-# The Development of Global Terrorism from 1970.
+# The Development of Global Terrorism since 1970.
 
 At first, I just plot all the event points on world map using [world.geo.json](https://github.com/johan/world.geo.json).
 
@@ -59,12 +59,30 @@ After the history development per year, I plot all event points on the map. But 
 
 What is more, for better interaction, I add sidebar with all the years and tooltips with event summary, attacktype, target, fatalities and injuries.
 
-![Final](./plot/final.png)
+![interaction](./plot/interaction.png)
+
+In the end, after careful consideration, I decided to discard the dynamic map feature and the final map with all data points.
+
+And then make a little change to the text mask- rename the title from "Global Terrorism before 2017" to "Global Terrorism since 1970", and then add a sentence to encourage the reader to explore the map by themselves.
+
+![text_mask](./plot/text_mask2.png)
+
+Last but not least, I adjust the theme and add the legend.
+
+![theme](./plot/orange_theme.png)
+
+# Major Findings
+
+ 1. the most conspicuous event is 911 in 2001.
+ 2. the global terrorism has developed alarmingly to almost all the corners of world. Actually, the terrorism activities already happened in 205 countries.
+ 3. The middle East and Africa are the hardest-hit areas and become worse and worse.
+ 4. There were lots of terrorism actions in Central America in 1980-1990 years. (Probably related to drugs creating activity in these years)
 
 # Feedback
-1. It take a long time to see the final result plot Global Terrorism before 2017. Why not just discard it.
-2. Why Global Terrorism 1993 is a all blank white world map?
-3. The plot is good, but I think maybe with some summary text it would be better.
+1. The most conspicuous events I noticed are 911 in 2001 and unknown Japan event in 1995. It take a long time to see the final result plot Global Terrorism before 2017. Why not just discard it. And Why Global Terrorism 1993 is a all blank white world map? If there is no data in 1993, I think it is meaningless to keep it.
+2. That's super cool, I haven't realize that the terrorism is so rampant without your map. There are no terrorism activities in Mongolia. Amazing! Is that the only country keep terrorism away? BTW, what your circle radius represent?
+3. There are so many terrorism activities missed information. I mean just like 911, there is a long description, but many events have no such summary description.
+The map just refresh my impression on terrorism. I have no idea that there are so many terrorism activities around the Philippines, Pakistan and Africa. Good job, impressing!
 
 # Resources
 https://github.com/d3/d3/wiki/transitions  
