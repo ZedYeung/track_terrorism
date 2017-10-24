@@ -1,0 +1,11 @@
+.ipynb_checkpoints
+*.ipynb
+
+test
+plot
+
+data/global_terrorism.csv
+data/globalterrorismdb_0617dist.csv
+data/Codebook.pdf
+
+Readme.md
