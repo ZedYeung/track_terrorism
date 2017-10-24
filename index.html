@@ -4,6 +4,15 @@
 <head>
   <meta charset="utf-8">
   <title>Global Terrorism Development</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108459233-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-108459233-1');
+  </script>
   <script src="https://d3js.org/d3.v3.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <style>
@@ -169,14 +178,8 @@
 
       // draw the terrorism event point on map
       function plot_points(data) {
-
-        // find the max intensity to scale to circle radius
-        var intensity_max = d3.max(data, function(d) {
-          return d["intensity"];
-        });
-
         var radius = d3.scale.sqrt()
-          .domain([0, intensity_max])
+          .domain([0, 8750])
           .range([0, 40]);
 
         // initialize tooltip to popup event information
@@ -187,18 +190,21 @@
         svg.append('g')
           .attr('class', 'bubble');
 
+        data.forEach(function (d) {
+          d.coords = projection([d.lon, d.lat]);
+          return d;
+        });
         /* animate the world map yearly
            the year 2017 will show a text mask with some statistics
            otherwise just show data points year by year
         */
         function update(year) {
           var filtered = data.filter(function(d) {
-
-            if (year == 2017) {
-              return d.year == 2016;
-            } else {
-              return d.year == year;
-            }
+              if (year == 2017) {
+                return d.year == 2016;
+              } else {
+                return d.year == year;
+              }
           });
 
           if (year == 2017) {
@@ -221,13 +227,13 @@
             .transition()
             .duration(500)
             .attr('cx', function(d) {
-              return d["coords"][0];
+              return d.coords[0];
             })
             .attr('cy', function(d) {
-              return d["coords"][1];
+              return d.coords[1];
             })
             .attr('r', function(d) {
-              return radius(d["intensity"]);
+              return radius(d.intensity);
             });
 
           circles.exit().remove();
@@ -238,11 +244,11 @@
                 tooltip.style("visibility", "visible")
                   .style("left", d3.event.pageX + 10 + "px")
                   .style("top", d3.event.pageY - 25 + "px")
-                  .html("<span style='color:#EFA747'>" + d["summary"] + "</span><br>" +
-                    "<strong>Attack type:</strong> <span style='color:#EFA747'>" + d["attacktype"] + "</span><br>" +
-                    "<strong>Target:</strong> <span style='color:#EFA747'>" + d["target"] + "</span><br>" +
-                    "<strong>Fatalities:</strong> <span style='color:#EFA747'>" + d["fatalities"] + "  " + "</span>" +
-                    "<strong>Injuries:</strong> <span style='color:#EFA747'>" + d["injuries"] + "</span>")
+                  .html("<span style='color:#EFA747'>" + d.summary + "</span><br>" +
+                    "<strong>Attack type:</strong> <span style='color:#EFA747'>" + d.attack + "</span><br>" +
+                    "<strong>Target:</strong> <span style='color:#EFA747'>" + d.target + "</span><br>" +
+                    "<strong>Fatalities:</strong> <span style='color:#EFA747'>" + d.fatalities + "  " + "</span>" +
+                    "<strong>Injuries:</strong> <span style='color:#EFA747'>" + d.injuries + "</span>")
               })
               .on("mouseout", function() {
                 tooltip.style("visibility", "hidden");
@@ -366,7 +372,6 @@
           if (year_idx >= years.length) {
             clearInterval(year_interval);
 
-
             var rect = svg.select('rect');
 
             /* after clicking, remove the text mask, and then
@@ -410,23 +415,12 @@
                 update(d);
               });
             });
-
-
-
           }
         }, 1000);
       };
 
       // load and preprocess the global terrorism data
-      d3.csv("./data/global_terrorism_map.csv", function(d) {
-        d['longitude'] = +d['longitude'];
-        d['latitude'] = +d['latitude'];
-        d['coords'] = projection([d['longitude'], d['latitude']]);
-        d["fatalities"] = +d["fatalities"];
-        d["injuries"] = +d["injuries"];
-        d['intensity'] = 1 + d["fatalities"] + d["injuries"] * 0.5;
-        return d;
-      }, plot_points);
+      d3.json("./data/global_terrorism_map.json", plot_points);
     };
   </script>
 </head>

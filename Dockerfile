@@ -1,10 +1,9 @@
-FROM ubuntu
+FROM node:8
 
-# Install python3
-RUN apt-get update
-RUN apt-get install -y python3
+# Install http-server
+RUN npm install http-server -g
 
-# Copy html
+# Copy html and data
 COPY /index.html /src/global_terrorism_development_visualize/
 COPY /data /src/global_terrorism_development_visualize/data/
 
@@ -13,4 +12,4 @@ WORKDIR /src/global_terrorism_development_visualize
 
 # Run http server on port 8080
 EXPOSE  8080
-CMD ["python3", "-m", "http.server", "8080"]
+CMD ["http-server", "-d", "false", "-g", "true", "-p", "8080"]
