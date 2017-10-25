@@ -1,0 +1,87 @@
+circle {
+  fill: #EFA747;
+  stroke: #1B1D1E;
+  stroke-width: 0;
+  opacity: 0.4;
+}
+
+g.legend circle {
+  fill: #EFA747;
+  stroke: #1B1D1E;
+  stroke-width: 0;
+  visibility: visible;
+}
+
+.mask {
+  fill: #1B1D1E;
+  opacity: 0.8;
+}
+
+h2 {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
+
+div.comment {
+  position: fixed;
+  top: 500px;
+  left: 200px;
+  bottom: 20px;
+  width: 180px;
+  height: 100px;
+  background-color: #1B1D1E;
+  padding: 2px;
+  margin: 2px;
+  border-radius: 5px;
+  opacity: 0.8;
+  visibility: visible;
+}
+
+div.comment div {
+  position: relative;
+  left: 5px;
+  width: 160px;
+  padding: 2px;
+  margin: 2px;
+  color: #EFA747;
+  font-weight: bold;
+}
+
+div.years_buttons {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  bottom: 20px;
+  width: 200px;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+div.years_buttons div {
+  background-color: #1B1D1E;
+  color: white;
+  width: 40px;
+  height: 25px;
+  padding: 2px;
+  margin: 2px;
+  border-radius: 5px;
+}
+
+div.toolTip {
+  position: absolute;
+  /*display: none;*/
+  min-width: 200px;
+  max-width: 700px;
+  height: auto;
+  background: #1B1D1E;
+  border: 1px;
+  border-radius: 8px;
+  /*border-color: #EFA747;*/
+  color: #EFA747;
+  padding: 5px;
+  text-align: center;
+  visibility: hidden;
+  z-index: 10;
+}

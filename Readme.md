@@ -1,8 +1,8 @@
 # Global Terrorism Visualization
-
+[Global Terrorism animation since 1970](35.203.139.90:8080)
 
 ## Summary
-This data Visualization mainly focus on the development of global terrorism from 1970.
+This data Visualization mainly focus on the development of global terrorism since 1970.
 
 
 ## Design
@@ -77,6 +77,7 @@ Last but not least, I adjust the theme and add the legend.
  2. the global terrorism has developed alarmingly to almost all the corners of world. Actually, the terrorism activities already happened in 205 countries.
  3. The middle East and Africa are the hardest-hit areas and become worse and worse.
  4. There were lots of terrorism actions in Central America in 1980-1990 years. (Probably related to drugs creating activity in these years)
+ 5. Mongolia is very conspicuous with 0 terrorism activity.
 
 # Feedback
 1. The most conspicuous events I noticed are 911 in 2001 and unknown Japan event in 1995. It take a long time to see the final result plot Global Terrorism before 2017. Why not just discard it. And Why Global Terrorism 1993 is a all blank white world map? If there is no data in 1993, I think it is meaningless to keep it.

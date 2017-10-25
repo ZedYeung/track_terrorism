@@ -1,6 +1,8 @@
 .ipynb_checkpoints
+__pycache__
 
 test
 
-data/global_terrorism.csv
-data/globalterrorismdb_0617dist.csv
+static/data/global_terrorism_map.json.gz
+static/data/global_terrorism.csv
+static/data/globalterrorismdb_0617dist.csv

@@ -4,8 +4,9 @@
 test
 plot
 
-data/global_terrorism.csv
-data/globalterrorismdb_0617dist.csv
-data/Codebook.pdf
+static/data/global_terrorism.csv
+static/data/globalterrorismdb_0617dist.csv
+static/data/Codebook.pdf
+static/data/global_terrorism_map.json.gz
 
 Readme.md
