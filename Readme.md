@@ -1,5 +1,6 @@
 # [Global Terrorism Visualization](http://blog.zedyeung.com/2017/10/26/Global-Terrorism-since-1970/)
 [Global Terrorism animation since 1970](http://35.203.139.90:8080)(Please be patience with the server)
+![demo](./plot/final.png)
 
 ## Summary
 This data Visualization mainly focus on the development of global terrorism since 1970.
