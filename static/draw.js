@@ -11,7 +11,7 @@ function draw(geo_data) {
   // add title
   d3.select("body")
     .append("h2")
-    .text("Grobal Terrorism ");
+    .text("Global Terrorism ");
 
   // initialize the svg
   var svg = d3.select("body")
@@ -105,10 +105,10 @@ function draw(geo_data) {
 
       if (year == 2017) {
         d3.select("h2")
-          .text("Grobal Terrorism since 1970");
+          .text("global Terrorism since 1970");
       } else {
         d3.select("h2")
-          .text("Grobal Terrorism " + year);
+          .text("global Terrorism " + year);
       }
 
       // add data points on map

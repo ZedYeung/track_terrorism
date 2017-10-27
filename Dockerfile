@@ -7,7 +7,8 @@ RUN apt-get update && apt-get install -y \
 RUN pip3 install \
   gunicorn \
   Flask \
-  flask-compress
+  flask-compress \
+  Flask-Cache
 
 # Copy html
 COPY /templates /src/global_terrorism_development_visualize/templates/
